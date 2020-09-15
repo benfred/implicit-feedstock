@@ -1,6 +1,6 @@
 {% set name = "implicit" %}
-{% set version = "0.4.2" %}
-{% set sha256 = "fb66ab4db428e02caae87b312d409b53d7c40c9e8258e642f228cc3cc550ed99" %}
+{% set version = "0.4.4" %}
+{% set sha256 = "4ec4966a6e34c676695528bfee3465c48cf7e0ba49594ad96ffb7608c795c2f6" %}
 
 package:
   name: {{ name|lower }}
@@ -24,9 +24,6 @@ requirements:
     - python
     - pip
     - cython >=0.24
-    - numpy
-    # implicit cimports BLAS from scipy
-    - scipy >=0.16
   run:
     - python
     - {{ pin_compatible('numpy') }}
